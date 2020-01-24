@@ -11,6 +11,16 @@ $(function(){
 			$('body').addClass('border-dark');
 		}
 	}
+	var sect2 = $( window.location.hash ),
+		bca = $('.bca-items');
+
+	if(sect2.length == 1) {
+		$('.section.active').removeClass('active');
+		sect2.addClass('active');
+		if( sect2.hasClass('border-d') ){
+			$('body').addClass('border-dark');
+		}
+	}
 	
 	/*=========================================================================
 		Magnific Popup (Project Popup initialization)
@@ -40,6 +50,14 @@ $(function(){
 			$('.portfolio-filters > li > a').removeClass('active');
 			$(this).addClass('active');
 			portfolio.shuffle('shuffle', groupName );
+		});
+		bca.shuffle();
+		$('.bca-filters > li > a').on('click', function (e) {
+			e.preventDefault();
+			var groupName2 = $(this).attr('data-group');
+			$('.bca-filters > li > a').removeClass('active');
+			$(this).addClass('active');
+			bca.shuffle('shuffle', groupName2 );
 		});
 		
 	});
