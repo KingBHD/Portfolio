@@ -116,7 +116,7 @@ $(function(){
 					success: 
 					"<div class='form-group' >\
 						<div class='alert alert-success' role='alert'> \
-							<strong>Message Sent!</strong> We'll be in touch as soon as possible\
+							<strong>Message Sent!</strong> I'll be in touch as soon as possible\
 						</div>\
 					</div>",
 					
