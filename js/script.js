@@ -40,6 +40,7 @@ $(function(){
 	$(window).on('load', function(){
 		$('body').addClass('loaded');
 		
+
 		/*=========================================================================
 			Portfolio Grid
 		=========================================================================*/
@@ -54,10 +55,14 @@ $(function(){
 		bca.shuffle();
 		$('.bca-filters > li > a').on('click', function (e) {
 			e.preventDefault();
-			var groupName2 = $(this).attr('data-group');
+			var groupName = $(this).attr('data-group');
 			$('.bca-filters > li > a').removeClass('active');
 			$(this).addClass('active');
-			bca.shuffle('shuffle', groupName2 );
+			if (groupName == 'announcement') {
+			}	else {
+				$('.bca-items > li > div').addClass('bca-active')
+			}
+			bca.shuffle('shuffle', groupName );	
 		});
 		
 	});
